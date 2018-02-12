@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent {label 'docker'}
   stages {
     stage('Maven in docker') {
         agent { docker 'maven:3.3.9-jdk-8-alpine' }
